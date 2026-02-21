@@ -1,13 +1,14 @@
 import {Router} from "express";
-import { deleteJson, getJson, postJson, putJson } from "../controllers/jsonController.js";
+import { deletejson, getjson, postjson, putjson } from "../controllers/jsoncontroller.js";
+
 
 const route = Router();
-route.get("/", getJson);
+route.get("/",getjson );
 
-route.post("/",postJson );
+route.post("/",postjson );
 
-route.put("/",putJson );
+route.put("/",putjson );
 
-route.delete("/",deleteJson );
+route.delete("/", deletejson);
 
 export default route;

@@ -1,7 +1,7 @@
 import express from "express";
-import { getMessage } from "../controllers.js/jsonController.js";
+import { getmessage } from "../controllers/controller.js";
 
 const route = express.Router();
-route.get("/",getMessage );
+route.get("/", getmessage);
 
 export default route;

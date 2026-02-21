@@ -1,11 +1,17 @@
 import express from "express";
-import route from "./routes/route.js";
-import jsonRoute from "./routes/jsonRoute.js"
+import route from "./Routes/route.js";
+import jsonRoutes from "./Routes/jsonroute.js"
 
-const apple = express();
+const app = express();
 
-apple.use("/", route);
-apple.use("/json",jsonRoute);
-apple.listen(5001,()=>{
+app.use("/", route);
+app.use("/json",jsonRoutes);
+
+app.get('/owner', (req, res) =>{
+res.json({ owner: "Ramesh Kaka" });
+});
+
+app.listen(5001,()=>{
     console.log("🚀Counter Running at port 5001");
 });
+
